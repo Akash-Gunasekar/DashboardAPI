@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .header {
+            background-color: #26ba5f; /* Set your desired background color */
+            width: 100%;
+            height: 17vh; /* Set the height to 17% of the viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .transparent-btn {          
+            background-color: transparent;
+            border: none;
+            color: #000;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin: 0 1rem 0 0; /* Added space between buttons by adjusting the right margin */
+            position: relative; /* Added to position the underline */
+        }
+
+        .transparent-btn::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px; /* Adjust the distance of the underline as needed */
+            width: 100%;
+            height: 2px; /* Thickness of the underline */
+            background-color: rgb(255, 255, 255); /* Color of the underline */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        
+            <div class="btn-container">
+                <!-- <button class="transparent-btn" onclick="showContent('stepsContent')">SOURCE CODE</button>
+                <button class="transparent-btn" onclick="showContent('stepsContent')">INPUT</button>
+                <button class="transparent-btn" onclick="showContent('stepsContent')">TECHNIQUES</button>
+                <button class="transparent-btn" onclick="showContent('stepsContent')">MODALS</button>
+                <button class="transparent-btn" onclick="navigateTo('display_steps')">STEPS</button> -->
+                <button class="transparent-btn" onclick="navigateTo('display_source')"><i class="fas fa-bars"></i> Menu</button> 
+            </div>
+    </header>
+    <script>
+        function navigateTo(url) {
+            window.location.href = '/' + url;
+        }
+    </script>
+</body>
+</html>
